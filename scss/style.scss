@@ -2,9 +2,11 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "layout/layout";
+
 @import "components/logo";
 @import "components/search";
 @import "components/user-nav";
+@import "components/side-nav";
+@import "components/legal";
 
-
-@import "layout/layout";
