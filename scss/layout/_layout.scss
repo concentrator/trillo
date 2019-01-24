@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include section-border;
+  border-bottom: var(--line);
 }
 
 .sidebar {
@@ -36,7 +36,7 @@
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
-  @include section-border;
+  border-bottom: var(--line);
 }
 
 .description {
