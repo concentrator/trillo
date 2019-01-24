@@ -1,0 +1,39 @@
+.overview {
+  display: flex;
+
+  &__heading {
+
+  }
+
+  &__stars {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+
+  }
+
+  &__icon-location {
+
+  }
+
+  &__rating {
+
+  }
+
+  &__rating-average {
+
+  }
+
+  &__rating-count {
+
+  }
+}

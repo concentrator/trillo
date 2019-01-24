@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:scss": "node-sass scss/style.scss css/style.css --output-style=expanded -w",
+    "watch:scss": "node-sass scss/style.scss css/style.css --output-style=expanded -w -r",
     "dev-server": "live-server",
     "start": "npm-run-all --parallel dev-server watch:scss",
 

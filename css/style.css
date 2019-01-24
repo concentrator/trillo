@@ -304,3 +304,27 @@ input[type="radio"].visually-hidden {
   text-align: center;
   color: var(--color-grey-light-4);
 }
+
+.gallery {
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  display: flex;
+}
+
+.overview__stars {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.overview__icon-star, .overview__icon-location {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--color-primary);
+}
