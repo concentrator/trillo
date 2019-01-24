@@ -1,0 +1,19 @@
+.button-inline {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font: inherit;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

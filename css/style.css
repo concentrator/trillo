@@ -91,6 +91,21 @@ input[type="radio"].visually-hidden {
   margin-top: 8rem !important;
 }
 
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -109,6 +124,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
 }
 
 .sidebar {
@@ -128,6 +144,26 @@ input[type="radio"].visually-hidden {
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
+}
+
+.button-inline {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font: inherit;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+}
+
+.button-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+
+.button-inline:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .search {
@@ -316,9 +352,20 @@ input[type="radio"].visually-hidden {
 
 .overview {
   display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.overview__heading {
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem 3rem;
 }
 
 .overview__stars {
+  display: flex;
   margin-left: 0;
   margin-right: auto;
 }
@@ -327,4 +374,37 @@ input[type="radio"].visually-hidden {
   width: 1.8rem;
   height: 1.8rem;
   fill: var(--color-primary);
+}
+
+.overview__location {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.overview__icon-location {
+  margin-right: 0.5rem;
+}
+
+.overview__rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 2.25rem;
+  margin-left: 3rem;
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.overview__rating-average {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: -3px;
+}
+
+.overview__rating-count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
