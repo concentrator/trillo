@@ -10,6 +10,7 @@
   --color-grey-dark-2: #777777;
   --color-grey-dark-3: #999999;
   --shadow-dark: 0 2rem 6rem 0 rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem 0 rgba(0, 0, 0, 0.06);
 }
 
 *,
@@ -138,7 +139,27 @@ input[type="radio"].visually-hidden {
 .hotel-view {
   background-color: #ffffff;
   flex: 1;
-  min-height: 80rem;
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.description {
+  flex: 0 0 60%;
+  padding: 3rem;
+  margin-right: 4.5rem;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-light);
+  font-size: 1.4rem;
+}
+
+.user-reviews {
+  background-color: orchid;
+  flex: 1;
 }
 
 .logo {
