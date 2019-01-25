@@ -202,6 +202,54 @@ input[type="radio"].visually-hidden {
   margin-left: 2rem;
 }
 
+.button {
+  position: relative;
+  display: inline-block;
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.button__visible {
+  display: inline-block;
+  padding: 2rem 7.5rem;
+  transition: all 0.2s;
+}
+
+.button__invisible {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 2rem 0;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+}
+
+.button:hover .button__visible {
+  transform: translateY(100%);
+}
+
+.button:hover .button__invisible {
+  top: 0;
+}
+
+.button:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
+}
+
 .button-inline {
   display: inline-block;
   padding-bottom: 2px;
@@ -553,4 +601,16 @@ input[type="radio"].visually-hidden {
   font-size: 2.2rem;
   color: var(--color-primary);
   font-weight: 300;
+}
+
+.cta {
+  padding: 3.5rem 4.5rem;
+  text-align: center;
+}
+
+.cta__book-now {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
 }

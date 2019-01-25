@@ -1,3 +1,53 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #ffffff;
+  overflow: hidden;
+
+  &__visible {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    transition: all 0.2s;
+  }
+
+  &__invisible {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover {
+    .button__visible {
+      transform: translateY(100%);
+    }
+
+    .button__invisible {
+      top: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
 .button-inline {
   display: inline-block;
   padding-bottom: 2px;
