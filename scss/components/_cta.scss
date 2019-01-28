@@ -8,4 +8,8 @@
     text-transform: uppercase;
     margin-bottom: 2.5rem;
   }
+
+  @include respond(bp-medium) {
+    padding: 2.5rem 3rem;
+  }
 }

@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: center;
 
+  @include respond(bp-smallest) {
+    flex-basis: 100%;
+    order: 3;
+    margin: 1rem 0;
+    background-color: var(--color-grey-light-2);
+    overflow: hidden;
+  }
+
   &__input {
     font: inherit;
     font-size: 1.4rem;
@@ -15,6 +23,12 @@
     width: 90%;
     margin-right: -3rem;
     transition: all 0.2s;
+
+    @include respond(bp-smallest) {
+      margin-right: -4rem;
+      padding-left: 1rem;
+      padding-right: 5rem;
+    }
 
     &::placeholder {
       font-weight: 100;

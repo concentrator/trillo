@@ -6,6 +6,11 @@
   box-shadow: var(--shadow-light);
   overflow: hidden;
 
+  @include respond(bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &::before {
     content: "\201C";
     position: absolute;
@@ -15,7 +20,6 @@
     font-size: 20rem;
     line-height: 1;
     color: var(--color-grey-light-2);
-
   }
 
   &__text {

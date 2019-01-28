@@ -30,6 +30,10 @@ html {
   // 1 rem definition
   font-size: 62.5%; // 1rem == 10px
   box-sizing: border-box;
+
+  @include respond(bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
